@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import AlbumThumb from '../common/AlbumThumb';
 
-interface Album {
-    userId: number;
-    id: number;
-    title: string;
-  }
 
 const AlbumsPage: React.FC = () => {
-    const [albums, setAlbums] = useState<Album[]>([]);
+    const [albums, setAlbums] = useState<AlbumThumb[]>([]);
 
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/albums')
@@ -19,10 +15,7 @@ const AlbumsPage: React.FC = () => {
         <div>
           <h1>Albums</h1>
           {albums.map(album => (
-            <div key={album.id}>
-              <h3>{album.title}</h3>
-              <a href={`/photos/${album.id}`}>View Photos</a>
-            </div>
+            <AlbumThumb key={album.id} id={album.id} userId={album.userId} title={album.title}/>
           ))}
         </div>
       );

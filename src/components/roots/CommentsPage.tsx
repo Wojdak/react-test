@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Comment from '../common/Comment';
+import AddComment from '../common/AddComment';
 
-interface Comment {
-    postId: number;
-    id: number;
-    name: string;
-    email: string;
-    body: string;
-  }
 
 const Comments: React.FC = () => {
     const { postId } = useParams<{ postId: string }>();
@@ -21,12 +16,10 @@ const Comments: React.FC = () => {
   
     return (
       <div>
+        <AddComment/>
         <h1>Comments</h1>
         {comments.map(comment => (
-          <div key={comment.id}>
-            <h3>{comment.name}</h3>
-            <p>{comment.body}</p>
-          </div>
+          <Comment key={comment.id} id={comment.id} name={comment.name} body={comment.body} email={comment.email}/>
         ))}
       </div>
     );

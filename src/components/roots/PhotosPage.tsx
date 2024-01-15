@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
-interface Photo {
-    albumId: number;
-    id: number;
-    title: string;
-    url: string;
-    thumbnailUrl: string;
-  }
+import Photo from '../common/Photo';
 
   const PhotosPage: React.FC = () => {
     const { albumId } = useParams<{ albumId: string }>();
@@ -23,11 +16,7 @@ interface Photo {
         <div>
           <h1>Photos</h1>
           {photos.map(photo => (
-            <div key={photo.id}>
-              <h3>{photo.title}</h3>
-              <p>{photo.url}</p>
-              <p>{photo.thumbnailUrl}</p>
-            </div>
+            <Photo key={photo.id} id={photo.id} title={photo.title} url={photo.url}/>
           ))}
         </div>
       );

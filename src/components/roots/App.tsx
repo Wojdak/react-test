@@ -5,7 +5,7 @@ import PostsPage from './PostsPage';
 import CommentsPage from './CommentsPage';
 import AlbumsPage from './AlbumsPage';
 import PhotosPage from './PhotosPage';
-import UsersPage from './UsersPage';
+import UserPage from './UserPage';
 import TodosPage from './TodosPage';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Route path="/comments/:postId" element={<CommentsPage />} />
       <Route path="/albums" element={<AlbumsPage />} />
       <Route path="/photos/:albumId" element={<PhotosPage />} />
-      <Route path="/users" element={<UsersPage />} />
+      <Route path="/users/:userId" element={<UserPage />} />
       <Route path="/todos/:userId" element={<TodosPage />} />
       {/* Define other routes similarly */}
     </Routes>
