@@ -1,0 +1,227 @@
+/* General styles */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Form styles */
+.add-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #a5a5a5;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.add-comment-form {
+  margin-bottom: 50px;
+}
+
+/*Post Page styles */
+
+/* Post component */
+.post-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+
+.post-head {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.post-head h2 {
+  margin-left: 3rem;
+}
+
+.post-body .post-body-content {
+  text-align: start;
+  margin-left: 3rem;
+}
+
+/* UserThumb component */
+.user-thumb {
+  display: flex;
+  align-items: center;
+}
+
+.user-thumb a {
+  display: flex;
+  align-items: center;
+}
+
+/* Comment Page styles */
+.comment-container {
+  margin-left: 3rem;
+}
+
+.comment-head {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-top: 1px solid #a5a5a5;
+}
+
+.comment-body {
+  margin-left: 2rem;
+}
+
+/* CommentBlock component */
+.comments-block-container {
+  margin-bottom: 2rem;
+}
+
+/* AlbumPage styles */
+.album-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  margin-bottom: 2rem;
+}
+
+.album-head {
+  display: flex;
+}
+
+.album-head a {
+  margin-left: 1.2rem;
+}
+
+/* Photo component */
+.photo-gallery {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.photo-item {
+  width: 33vw;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.photo-item h3 {
+  text-align: center;
+  max-width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* UserPage styles */
+.user-info {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #a5a5a5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.user-info h2 {
+  margin-bottom: 1.1rem;
+}
+
+.user-info a:hover {
+  background-color: #0056b3;
+}
+
+.user-info .links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-info section {
+  border-top: 1px solid #ccc;
+}
+

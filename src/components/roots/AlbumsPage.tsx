@@ -13,7 +13,7 @@ const AlbumsPage: React.FC = () => {
 
       return (
         <div>
-          <h1>Albums</h1>
+          <h1 className='center'>Albums</h1>
           {albums.map(album => (
             <AlbumThumb key={album.id} id={album.id} userId={album.userId} title={album.title}/>
           ))}

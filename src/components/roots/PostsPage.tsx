@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Post from '../common/Post';
 import AddPost from '../common/AddPost';
+import '../../styles/styles.css'
+
 
 const PostsPage: React.FC = () => {
     const [posts, setPosts] = useState<Post[]>([]);
@@ -14,7 +16,7 @@ const PostsPage: React.FC = () => {
     return (
         <div>
             <AddPost/>
-            <h1>Posts</h1>
+            <h1 className='center'>Posts</h1>
             {posts.map(post => (
                 <Post key={post.id} id={post.id} userId={post.userId} title={post.title} body={post.body} />
             ))}
