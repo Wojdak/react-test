@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UserThumb from './UserThumb';
+import CommentBlock from './CommentBlock';
 
 interface Post {
     userId: number;
@@ -14,7 +15,7 @@ const Post: React.FC<Post> = ({id, userId, title, body}) => {
             <UserThumb id={userId}/>
             <h2>{title}</h2>
             <p>{body}</p>
-            <a href={`/comments/${id}`}>View Comments</a>
+            <CommentBlock postId={id}/>
             </div>
     );
 };
