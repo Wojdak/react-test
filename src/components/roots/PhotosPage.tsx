@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Photo from "../common/Photo";
 import "../../styles/styles.css";
+import AddPhoto from "../common/AddPhoto";
 
 const PhotosPage: React.FC = () => {
   const { albumId } = useParams<{ albumId: string }>();
@@ -16,6 +17,7 @@ const PhotosPage: React.FC = () => {
 
   return (
     <div>
+      <AddPhoto />
       <h1 className="center">Photos</h1>
       <div className="photo-gallery">
         {photos.map((photo) => (

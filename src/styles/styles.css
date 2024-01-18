@@ -90,6 +90,11 @@ input {
   margin-bottom: 50px;
 }
 
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 /*Post Page styles */
 
 /* Post component */
@@ -225,3 +230,21 @@ input {
   border-top: 1px solid #ccc;
 }
 
+/* TodoPage styles */
+.todo-item {
+  border: 1px solid #ccc;
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.completed {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.not-completed {
+  color: #dc3545; 
+  font-weight: bold;
+}

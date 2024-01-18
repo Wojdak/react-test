@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-
-interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-}
+import Todo from '../common/Todo';
+import AddTodo from '../common/AddTodo';
 
 const TodosPage: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -20,12 +15,10 @@ const TodosPage: React.FC = () => {
 
   return (
     <div>
-      <h1>Todos for User {userId}</h1>
+      <AddTodo/>
+      <h1 className='center'>Todos</h1>
       {todos.map(todo => (
-        <div key={todo.id}>
-          <h3>{todo.title}</h3>
-          <p>Completed: {todo.completed ? 'Yes' : 'No'}</p>
-        </div>
+        <Todo key={todo.id} id={todo.id} userId={todo.userId} title={todo.title} completed={todo.completed} />
       ))}
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AlbumThumb from '../common/AlbumThumb';
+import AddAlbum from '../common/AddAlbum';
 
 
 const AlbumsPage: React.FC = () => {
@@ -13,6 +14,7 @@ const AlbumsPage: React.FC = () => {
 
       return (
         <div>
+          <AddAlbum />
           <h1 className='center'>Albums</h1>
           {albums.map(album => (
             <AlbumThumb key={album.id} id={album.id} userId={album.userId} title={album.title}/>
