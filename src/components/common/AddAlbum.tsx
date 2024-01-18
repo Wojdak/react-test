@@ -3,11 +3,9 @@ import axios from "axios";
 import "../../styles/styles.css";
 
 const AddAlbum: React.FC = () => {
-  const [newUserId, setNewUserId] = useState("");
   const [newTitle, setNewTitle] = useState("");
 
   const albumData = {
-    userId: parseInt(newUserId, 10),
     title: newTitle,
   };
 
@@ -25,31 +23,21 @@ const AddAlbum: React.FC = () => {
         alert(`Album added successfully! Title: ${newTitle}`);
       })
       .finally(() => {
-        setNewUserId("");
         setNewTitle("");
       });
   };
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
-      <div className="form-row">
-        <label htmlFor="album-user-id-form">User ID</label>
-        <input
-          type="text"
-          onChange={(e) => setNewUserId(e.target.value)}
-          value={newUserId}
-          id="album-user-id-form"
-        />
-      </div>
-      <div className="form-row">
         <label htmlFor="album-title-form">Album Title</label>
+        <div className="form-row">
         <input
           type="text"
           onChange={(e) => setNewTitle(e.target.value)}
           value={newTitle}
           id="album-title-form"
         />
-      </div>
+        </div>
       <button className="submit-button">Add Album</button>
     </form>
   );

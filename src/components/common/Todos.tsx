@@ -17,7 +17,7 @@ const Todos: React.FC<Todos> = ({userId}) => {
 
 
   return (
-      <div className="todos2">
+      <div className="todo-list">
         {todos.map((todo) => (
           <Todo id={todo.id} userId={todo.userId} title={todo.title} completed={todo.completed}/>
         ))}

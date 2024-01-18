@@ -19,7 +19,7 @@ const UserThumb: React.FC<User> = ({id}) => {
         <div className='user-thumb'>
             <a href={`/users/${id}`}>
                 <img src="https://placehold.co/50" alt="User Profile Picture" />
-                <h4>{user?.username}: </h4>
+                <h4>{user?.username}</h4>
             </a>
         </div>
     );

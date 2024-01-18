@@ -51,6 +51,7 @@ const UserPage: React.FC = () => {
       </section>
 
       <section>
+        <h3>Todos:</h3>
         <Todos userId={userId ? parseInt(userId, 10) : undefined}/>
       </section>
     </div>

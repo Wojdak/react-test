@@ -127,6 +127,12 @@ input {
 .user-thumb a {
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+.user-thumb img {
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }
 
 /* Comment Page styles */
@@ -232,18 +238,23 @@ input {
 /* TodoPage styles */
 .todo-item {
   border: 1px solid #ccc;
-  width: 50vw;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  display: flex;
 }
 
 .completed {
-  color: #28a745;
-  font-weight: bold;
+  min-width: 0.5rem;
+  border-radius: 0.25rem 0rem 0rem 0.25rem;
+  background-color: #28a745;
+  margin-right: 0.5rem;
 }
 
 .not-completed {
-  color: #dc3545; 
-  font-weight: bold;
+  min-width: 0.5rem;
+  border-radius: 0.25rem 0rem 0rem 0.25rem;
+  background-color: #dc3545;
+  margin-right: 0.5rem;
 }

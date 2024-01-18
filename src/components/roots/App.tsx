@@ -13,6 +13,7 @@ function App() {
     <Router>
     <NavBar />
     <Routes>
+      <Route path="/" element={<PostsPage />} />
       <Route path="/posts" element={<PostsPage />} />
       <Route path="/comments/:postId" element={<CommentsPage />} />
       <Route path="/albums" element={<AlbumsPage />} />
