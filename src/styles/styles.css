@@ -28,7 +28,7 @@ p {
 }
 
 body {
-  background-color: #f0f2f5;
+  background-color: #474747;
   color: #333;
 }
 
@@ -92,8 +92,7 @@ input {
 
 .checkbox-row {
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: left;
 }
 /*Post Page styles */
 

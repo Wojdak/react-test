@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { isNull } from "util";
+import Todos from "../common/Todos";
 
 interface User {
   id: number;
@@ -49,10 +50,8 @@ const UserPage: React.FC = () => {
         <p>{user?.address.street}</p>
       </section>
 
-      <section className="links">
-        <a href={`/todos/${user?.id}`}>View Posts</a>
-        <a href={`/todos/${user?.id}`}>View Albums</a>
-        <a href={`/todos/${user?.id}`}>View Todos</a>
+      <section>
+        <Todos userId={userId ? parseInt(userId, 10) : undefined}/>
       </section>
     </div>
   );
