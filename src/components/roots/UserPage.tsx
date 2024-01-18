@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { isNull } from "util";
 import Todos from "../common/Todos";
+import AddTodo from "../common/AddTodo";
 
 interface User {
   id: number;
@@ -53,6 +53,10 @@ const UserPage: React.FC = () => {
       <section>
         <h3>Todos:</h3>
         <Todos userId={userId ? parseInt(userId, 10) : undefined}/>
+      </section>
+
+      <section>
+        <AddTodo/>
       </section>
     </div>
   );
